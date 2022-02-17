@@ -32,8 +32,6 @@ Rather than starting from scratch, we decided to focus on this repo, and on thes
 The PPO article proposes the novel way to optimise the value function of agent with policy parameters by differential function. It improves on previously proposed method Trust Region Policy Optimisation, by utilising clipping of the gradient as a way to enforce closeness between distributions. This provides the possibility to re-utilise the batched sampled data multiple times, which strongly improves the data efficiency of TRPO, but keeps its reliable performance. Also the article proposes the answer to one of the problems with choice of hyper parameter, representing the impact of Kullback Leiber divergence between two policies in the loss function. Its does in automatic manner, improving on the TRPO method.
 We saw that in terms of performance, PPO performs significantly better in the continuous domain, and in games like Atari in terms of sample efficiency (especially in terms of fast training).
 
-This is the fork of the reposetory made by Eric Yu. 
-
 ## Usage
 
 To train from scratch:
@@ -50,4 +48,5 @@ To train with existing actor/critic models:
 ```
 python main.py --actor_model ppo_actor.pth --critic_model ppo_critic.pth
 ```
-For original code implementation please refer to Eric Yu [Medium article](https://medium.com/@eyyu/coding-ppo-from-scratch-with-pytorch-part-1-4-613dfc1b14c8).
+This is the fork of the reposetory made by Eric Yu. 
+For original code implementation please refer to  [Eric Yu repo](https://github.com/ericyangyu/PPO-for-Beginners) or [Medium article](https://medium.com/@eyyu/coding-ppo-from-scratch-with-pytorch-part-1-4-613dfc1b14c8).
